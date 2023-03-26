@@ -1,4 +1,22 @@
+<?php 
+ session_start();
+ if( !isset($_SESSION["totalcorrect"])) {
+ echo"Variable has been set. <br>";
+ $_SESSION["totalcorrect"] = 0;
+ 
 
+ }
+
+ if( !isset($_SESSION["correctincorrect"])) {
+ echo"Variable has been set. <br>";
+ $_SESSION["correctincorrect"] = "";
+
+}
+$totalCorrect = $_SESSION["totalcorrect"];
+$correctincorrect = $_SESSION["correctincorrect"];
+
+
+?> 
 <!DOCTYPE html>
 
 <html>
@@ -15,9 +33,11 @@
  
 	<div id="wrapper">
  
-		<h1> Your results</h1>
+
+
 		
-        <?php
+        <?php                
+        
             
             $a1 = $_POST['q1ans'];
             $a2 = $_POST['q2ans'];
@@ -35,27 +55,50 @@
             $a14 = $_POST['q14ans'];
             $a15 = $_POST['q15ans'];
         
-            $totalCorrect = 0;
             
-            if ($a1 == "C") { $totalCorrect++; }
-            if ($a2 == "C") { $totalCorrect++; }
-            if ($a3 == "B") { $totalCorrect++; }
-            if ($a4 == "D") { $totalCorrect++; }
-            if ($a5 == "D") { $totalCorrect++; }
-            if ($a6 == "A") { $totalCorrect++; }
-            if ($a7 == "C") { $totalCorrect++; }
-            if ($a8 == "A") { $totalCorrect++; }
-            if ($a9 == "C") { $totalCorrect++; }
-            if ($a10 == "C") { $totalCorrect++; }
-            if ($a11 == "A") { $totalCorrect++; }
-            if ($a12 == "C") { $totalCorrect++; }
-            if ($a13 == "C") { $totalCorrect++; }
-            if ($a14 == "B") { $totalCorrect++; }
-            if ($a15 == "C") { $totalCorrect++; }
+            if ($a1 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else  { $correctincorrect = "Incorrect"; }
+            if ($a2 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a3 == "B") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a4 == "D") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a5 == "D") { $totalCorrect++;$correctincorrect = "Correct";  }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a6 == "A") { $totalCorrect++;$correctincorrect = "Correct";  }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a7 == "C") { $totalCorrect++;$correctincorrect = "Correct";  }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a8 == "A") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a9 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a10 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a11 == "A") { $totalCorrect++;$correctincorrect = "Correct";  }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a12 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a13 == "C") { $totalCorrect++;$correctincorrect = "Correct";  }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a14 == "B") { $totalCorrect++;$correctincorrect = "Correct";  }
+            else { $correctincorrect = "Incorrect"; }
+            if ($a15 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
+            else { $correctincorrect = "Incorrect"; }
+     
+
+            
             
             echo "<div id='results'>$totalCorrect / 15 correct</div>";
+            $_SESSION["totalcorrect"] = $totalCorrect;
+            $_SESSION["correctincorrect"] = $correctincorrect;
             
         ?>
+
+<h1> Your results is <?=$correctincorrect?></h1> 
+<h1>   <a href="intro.php"><h1> Go back to questions </h1> </a>
+        	
 	
 	</div>
  
