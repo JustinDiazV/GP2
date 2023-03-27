@@ -1,28 +1,41 @@
+body, html{
+	height: 100%;
+}
 body{
-	background-image:url("background.png");
-	background-size: cover;
+	background-image: url("background.png");
+  	background-size: cover;
+  	height: 100%;
+	backdrop-filter: blur(5px);
 }
 .host1{
 	float: left;
 	width: 380px;
-	height: 380px;
+	height: 400px;
 }
 .host2{
 	float: right;
 	width: 280px;
-	height: 380px;
+	height: 400px;
+}
+.millionaire{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	height: 180px;
 }
 .login{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: gold;
-	width: 230px;
-	border: 3px solid black;
+	width: 300px;
+    border:solid 2px rgba(255,255,255,0.4); 
+    border-radius:20px; 
+    background-color:rgba(0,0,0,0.8);
 	padding: 10px;
 }
 label{
-	color: black;
+	color: white;
 	font-size: 150%;
 	font-weight: bold;
 }
@@ -30,8 +43,18 @@ input[type="submit"]{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: gold;
-	color: black;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
 	font-size: 120%;
 	font-weight: bold;
+}
+input[type="submit"]:hover{
+    background: transparent;
+    color: whitesmoke;
+    box-shadow: 0 0 5px gold,
+                0 0 25px gold,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    transform: scale(1.3);
 }
