@@ -1,22 +1,4 @@
-<?php 
- session_start();
- if( !isset($_SESSION["totalcorrect"])) {
- echo"Variable has been set. <br>";
- $_SESSION["totalcorrect"] = 0;
- 
 
- }
-
- if( !isset($_SESSION["correctincorrect"])) {
- echo"Variable has been set. <br>";
- $_SESSION["correctincorrect"] = "";
-
-}
-$totalCorrect = $_SESSION["totalcorrect"];
-$correctincorrect = $_SESSION["correctincorrect"];
-
-
-?> 
 <!DOCTYPE html>
 
 <html>
@@ -30,14 +12,11 @@ $correctincorrect = $_SESSION["correctincorrect"];
 </head>
  
 <body>
- 
+ 	<form action="winningpage.php" method="POST">
 	<div id="wrapper">
- 
-
-
-		
-        <?php                
-        
+ 		
+        <?php
+        	$score= 0;
             
             $a1 = $_POST['q1ans'];
             $a2 = $_POST['q2ans'];
@@ -55,50 +34,43 @@ $correctincorrect = $_SESSION["correctincorrect"];
             $a14 = $_POST['q14ans'];
             $a15 = $_POST['q15ans'];
         
+            $totalCorrect = 0;
+            if ($a1 == "C") { $totalCorrect++; }
             
-            if ($a1 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else  { $correctincorrect = "Incorrect"; }
-            if ($a2 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a3 == "B") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a4 == "D") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a5 == "D") { $totalCorrect++;$correctincorrect = "Correct";  }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a6 == "A") { $totalCorrect++;$correctincorrect = "Correct";  }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a7 == "C") { $totalCorrect++;$correctincorrect = "Correct";  }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a8 == "A") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a9 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a10 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a11 == "A") { $totalCorrect++;$correctincorrect = "Correct";  }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a12 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a13 == "C") { $totalCorrect++;$correctincorrect = "Correct";  }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a14 == "B") { $totalCorrect++;$correctincorrect = "Correct";  }
-            else { $correctincorrect = "Incorrect"; }
-            if ($a15 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
-            else { $correctincorrect = "Incorrect"; }
-     
+            else if ($a2 == "C") { $totalCorrect+2; }
+            
+            else if ($a3 == "B") { $totalCorrect+3; }
+            
+            else if ($a4 == "D") { $totalCorrect++; }
+            
+            else if ($a5 == "D") { $totalCorrect++; }
+            
+            else if ($a6 == "A") { $totalCorrect++; }
+            
+            else if ($a7 == "C") { $totalCorrect++; }
+            
+            else if ($a8 == "A") { $totalCorrect++; }
+            
+            else if ($a9 == "C") { $totalCorrect++; }
+            
+            else if ($a10 == "C") { $totalCorrect++; }
+            
+            else if ($a11 == "A") { $totalCorrect++; }
+            
+            else if ($a12 == "C") { $totalCorrect++; }
+            
+            else if ($a13 == "C") { $totalCorrect++; }
+            
+            else if ($a14 == "B") { $totalCorrect++; }
+            
+            else if ($a15 == "C") { $totalCorrect++; }
+            
+            else {header("location: winningpage.php");}
+            
+            echo "<h1><div id='results'>Your score: $totalCorrect / 15 correct</div></h1>";
+            echo "<h1><a href='intro.php'>Back to questions</a></div></h1>";
 
-            
-            
-            echo "<div id='results'>$totalCorrect / 15 correct</div>";
-            $_SESSION["totalcorrect"] = $totalCorrect;
-            $_SESSION["correctincorrect"] = $correctincorrect;
-            
         ?>
-
-<h1> Your results is <?=$correctincorrect?></h1> 
-<h1>   <a href="intro.php"><h1> Go back to questions </h1> </a>
-        	
 	
 	</div>
  
