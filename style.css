@@ -2,7 +2,7 @@ body, html{
 	height: 100%;
 }
 body{
-	background-image: url("background.png");
+	background-image: url("millionaire.gif");
   	background-size: cover;
   	height: 100%;
 	backdrop-filter: blur(5px);
