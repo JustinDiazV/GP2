@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	session_destroy();
+?>
 <!DOCTYPE html>
 <html>	
 	<head>
@@ -17,5 +21,8 @@
 			<input type="submit" value="Lets win some money!">
 		</div>
 	</form>
+	<div class="login">
+		<h1><a href='leaderboard.php'>Leaderboard</a></h1>
+	</div>
 	</body>
 </html>

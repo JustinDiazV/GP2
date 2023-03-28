@@ -246,7 +246,6 @@ body{
     width: 500px; 
     margin: 0 auto;
     border-color: #03e9f4;
-    color: greenyellow;
   }
   input[type="submit"]{
     display:grid;
@@ -264,10 +263,11 @@ body{
   
   } */
  
-h1{ 
+h1  { 
   border: 1px solid greenyellow;
   color: greenyellow;
-}
+  align-self: center;
+ }
 
 .btn-group input[type="radio"] {
   display: none;
@@ -279,14 +279,20 @@ h1{
   border-radius: 20px;
   width: 400px;
 }
+
+.hidden {
+
+  visibility: hidden;
+}
+
 a{
-	color: greenyellow;
+  color: greenyellow;
 }
 
 a:link{
-	color: greenyellow;
+  color: greenyellow;
 }
 
 a:visited{
-	color: greenyellow;
+  color: greenyellow;
 }
