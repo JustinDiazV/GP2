@@ -10,6 +10,8 @@
 	?>
 	<div class= "login">
 		<h3>Leaderboard</h3>
+	</div>
+	<div class= "login">
 		<pre><h3><?=$filecontents?></h3></pre>
 	</div>
 	</body>

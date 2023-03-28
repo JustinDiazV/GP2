@@ -22,7 +22,7 @@
 		</div>
 	</form>
 	<div class="login">
-		<h1><a href='leaderboard.php'>Leaderboard</a></h1>
+		<h1><a href='leaderboard.php'>Go To Leaderboard</a></h1>
 	</div>
 	</body>
 </html>

@@ -146,7 +146,7 @@
 
             if($totalCorrect == 15){
                 $file = fopen('file.txt', 'a');
-		        $text = ' earned: '.$savedmoney." dollars.<br>";
+		        $text = ':'.$savedmoney."<br>";
 		        fwrite($file, $text);
 		        fclose($file);
                 header("location: winningpage.php");
