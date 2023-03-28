@@ -6,7 +6,6 @@
 	</head>
 	<body>
 	</br></br></br></br></br></br></br></br>
-	<img class="millionaire" src="millionaire.gif" alt="millionaire">
 	<img class= "host1" src="host1.png" alt="host1">
 	<img class= "host2" src="host2.png" alt="host2">
 	<form action="intro.php" method="POST">

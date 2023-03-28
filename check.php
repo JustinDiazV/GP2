@@ -13,6 +13,7 @@
  
 <body>
  	<form action="winningpage.php" method="POST">
+ 	<form action="losingpage.php" method="POST">
 	<div id="wrapper">
  		
         <?php
@@ -35,41 +36,40 @@
             $a15 = $_POST['q15ans'];
         
             $totalCorrect = 0;
-            if ($a1 == "C") { $totalCorrect++; }
+            if ($a1 == "C") { $totalCorrect=1; }
             
-            else if ($a2 == "C") { $totalCorrect+2; }
+            else if ($a2 == "C") { $totalCorrect=2; }
             
-            else if ($a3 == "B") { $totalCorrect+3; }
+            else if ($a3 == "B") { $totalCorrect=3; }
             
-            else if ($a4 == "D") { $totalCorrect++; }
+            else if ($a4 == "D") { $totalCorrect=4; }
             
-            else if ($a5 == "D") { $totalCorrect++; }
+            else if ($a5 == "D") { $totalCorrect=5; }
             
-            else if ($a6 == "A") { $totalCorrect++; }
+            else if ($a6 == "A") { $totalCorrect=6; }
             
-            else if ($a7 == "C") { $totalCorrect++; }
+            else if ($a7 == "C") { $totalCorrect=7; }
             
-            else if ($a8 == "A") { $totalCorrect++; }
+            else if ($a8 == "A") { $totalCorrect=8; }
             
-            else if ($a9 == "C") { $totalCorrect++; }
+            else if ($a9 == "C") { $totalCorrect=9; }
             
-            else if ($a10 == "C") { $totalCorrect++; }
+            else if ($a10 == "C") { $totalCorrect=10; }
             
-            else if ($a11 == "A") { $totalCorrect++; }
+            else if ($a11 == "A") { $totalCorrect=11; }
             
-            else if ($a12 == "C") { $totalCorrect++; }
+            else if ($a12 == "C") { $totalCorrect=12; }
             
-            else if ($a13 == "C") { $totalCorrect++; }
+            else if ($a13 == "C") { $totalCorrect=13; }
             
-            else if ($a14 == "B") { $totalCorrect++; }
+            else if ($a14 == "B") { $totalCorrect=14; }
             
-            else if ($a15 == "C") { $totalCorrect++; }
+            else if ($a15 == "C") {header("location: winningpage.php");}
             
-            else {header("location: winningpage.php");}
+            else {header("location: losingpage.php");}
             
-            echo "<h1><div id='results'>Your score: $totalCorrect / 15 correct</div></h1>";
-            echo "<h1><a href='intro.php'>Back to questions</a></div></h1>";
-
+            echo "<h1><div id='results'>Your score: $totalCorrect / 15 correct </br>
+            <a href='intro.php'>Continue to the next questions</a></div></h1>";
         ?>
 	
 	</div>
