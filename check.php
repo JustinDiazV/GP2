@@ -1,9 +1,69 @@
+<<<<<<< Updated upstream
 <?php 
  session_start();
  if( !isset($_SESSION["totalcorrect"])) {
  echo"Variable has been set. <br>";
  $_SESSION["totalcorrect"] = 0;
  
+=======
+<?php
+    session_start();
+    if(!isset($_SESSION['questions'])){
+        $_SESSION['questions'] = [];
+        $_SESSION['counter'] = 0;
+    }
+
+    $_SESSION['counter']++;
+
+    if(isset($_POST['q1ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 1;
+    }
+    elseif(isset($_POST['q2ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 2;
+    }
+    elseif(isset($_POST['q3ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 3;
+    }
+    elseif(isset($_POST['q4ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 4;
+    }
+    elseif(isset($_POST['q5ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 5;
+    }
+    elseif(isset($_POST['q6ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 6;
+    }
+    elseif(isset($_POST['q7ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 7;
+    }
+    elseif(isset($_POST['q8ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 8;
+    }
+    elseif(isset($_POST['q9ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 9;
+    }
+    elseif(isset($_POST['q10ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 10;
+    }
+    elseif(isset($_POST['q11ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 11;
+    }
+    elseif(isset($_POST['q12ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 12;
+    }
+    elseif(isset($_POST['q13ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 13;
+    }
+    elseif(isset($_POST['q14ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 14;
+    }
+    elseif(isset($_POST['q15ans'])){
+        $_SESSION['questions'][$_SESSION['counter']] = 15;
+    }
+
+?>
+
+>>>>>>> Stashed changes
 
  }
 
@@ -56,6 +116,7 @@ $correctincorrect = $_SESSION["correctincorrect"];
             $a15 = $_POST['q15ans'];
         
             
+<<<<<<< Updated upstream
             if ($a1 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
             else  { $correctincorrect = "Incorrect"; }
             if ($a2 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
@@ -87,6 +148,40 @@ $correctincorrect = $_SESSION["correctincorrect"];
             if ($a15 == "C") { $totalCorrect++; $correctincorrect = "Correct"; }
             else { $correctincorrect = "Incorrect"; }
      
+=======
+            else if ($a2 == "C") { $totalCorrect+2; }
+            
+            else if ($a3 == "B") { $totalCorrect+3; }
+            
+            else if ($a4 == "D") { $totalCorrect++; }
+            
+            else if ($a5 == "D") { $totalCorrect++; }
+            
+            else if ($a6 == "A") { $totalCorrect++; }
+            
+            else if ($a7 == "C") { $totalCorrect++; }
+            
+            else if ($a8 == "A") { $totalCorrect++; }
+            
+            else if ($a9 == "C") { $totalCorrect++; }
+            
+            else if ($a10 == "C") { $totalCorrect++; }
+            
+            else if ($a11 == "A") { $totalCorrect++; }
+            
+            else if ($a12 == "C") { $totalCorrect++; }
+            
+            else if ($a13 == "C") { $totalCorrect++; }
+            
+            else if ($a14 == "B") { $totalCorrect++; }
+            
+            else if ($a15 == "C") { $totalCorrect++; }
+            
+            //else {header("location: winningpage.php");}
+            
+            echo "<h1><div id='results'>Your score: $totalCorrect / 15 correct</div></h1>";
+            echo "<h1><a href='intro.php'>Back to questions</a></div></h1>";
+>>>>>>> Stashed changes
 
             
             

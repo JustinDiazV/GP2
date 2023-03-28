@@ -278,3 +278,8 @@ h1  {
   border-radius: 20px;
   width: 400px;
 }
+
+.hidden {
+
+  visibility: hidden;
+}

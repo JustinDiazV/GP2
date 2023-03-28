@@ -1,5 +1,5 @@
 <?php
-
+session_start()
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -47,49 +47,113 @@
 
                     
                     <li class="Initems">
-                    <label for="q15" tabindex="0" class="button">$1,000,000</label>
+                        <?php 
+                        $c = "button";
+                        $c2 = "button";
+                        $c3 = "button";
+                        $c4 = "button";
+                        $c5 = "button";
+                        $c6 = "button";
+                        $c7 = "button";
+                        $c8 = "button";
+                        $c9 = "button";
+                        $c10 = "button";
+                        $c11 = "button";
+                        $c12 = "button";
+                        $c13 = "button";
+                        $c14 = "button";
+                        $c15 = "button";
+
+                        if(in_array(15, $_SESSION['questions'])){
+                            $c15 = "hidden";
+                        }
+                        if(in_array(14, $_SESSION['questions'])){
+                            $c14 = "hidden";
+                        } 
+                        if(in_array(13, $_SESSION['questions'])){
+                            $c13 = "hidden";
+                        }
+                        if(in_array(12, $_SESSION['questions'])){
+                            $c12 = "hidden";
+                        } 
+                        if(in_array(11, $_SESSION['questions'])){
+                            $c11 = "hidden";
+                        } 
+                        if(in_array(10, $_SESSION['questions'])){
+                            $c10 = "hidden";
+                        } 
+                        if(in_array(9, $_SESSION['questions'])){
+                            $c9 = "hidden";
+                        } 
+                        if(in_array(8, $_SESSION['questions'])){
+                            $c8 = "hidden";
+                        } 
+                        if(in_array(7, $_SESSION['questions'])){
+                            $c7 = "hidden";
+                        } 
+                        if(in_array(6, $_SESSION['questions'])){
+                            $c6 = "hidden";
+                        } 
+                        if(in_array(5, $_SESSION['questions'])){
+                            $c5 = "hidden";
+                        } 
+                        if(in_array(4, $_SESSION['questions'])){
+                            $c4 = "hidden";
+                        } 
+                        if(in_array(3, $_SESSION['questions'])){
+                            $c3 = "hidden";
+                        } 
+                        if(in_array(2, $_SESSION['questions'])){
+                            $c2 = "hidden";
+                        } 
+                        if(in_array(1, $_SESSION['questions'])){
+                            $c = "hidden";
+                        }  
+                            ?>
+                        
+                   <!--  Finish hidden --> <label for="q15" tabindex="0" class=<?=$c15?>>$1,000,000</label>
                     </li>
                     <li class="Initems">
-                    <label for="q14" tabindex="0" class="button">$500,000</label>
+                    <label for="q14" tabindex="0" class=<?=$c14?>>$500,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q13" tabindex="0" class="button">$250,000</label>
+                        <label for="q13" tabindex="0" class=<?=$c13?>>$250,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q12" tabindex="0" class="button">$125,000</label>
+                        <label for="q12" tabindex="0" class=<?=$c12?>>$125,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q11" tabindex="0" class="button">$64,000</label>
+                        <label for="q11" tabindex="0" class=<?=$c11?>>$64,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q10" tabindex="0" class="button">$32,000</label>
+                        <label for="q10" tabindex="0" class=<?=$c10?>>$32,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q9" tabindex="0" class="button">$16,000</label>
+                        <label for="q9" tabindex="0" class=<?=$c9?>>$16,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q8" tabindex="0" class="button">$8,000</label>
+                        <label for="q8" tabindex="0" class=<?=$c8?>>$8,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q7" tabindex="0" class="button">$4,000</label>
+                        <label for="q7" tabindex="0" class=<?=$c7?>>$4,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q6" tabindex="0" class="button">$2,000</label>
+                        <label for="q6" tabindex="0" class=<?=$c6?>>$2,000</label>
                     </li>                    
                     <li class="Initems">
-                        <label for="q5" tabindex="0" class="button">$1,000</label>
+                        <label for="q5" tabindex="0" class=<?=$c5?>>$1,000</label>
                     </li>
                     <li class="Initems">
-                        <label for="q4" tabindex="0" class="button">$500</label>
+                        <label for="q4" tabindex="0" class=<?=$c4?>>$500</label>
                     </li> 
                     <li class="Initems">
-                        <label for="q3" tabindex="0" class="button">$300</label>
+                        <label for="q3" tabindex="0" class=<?=$c3?>>$300</label>
                     </li>                    
                     <li class="Initems">
-                        <label for="q2" tabindex="0" class="button">$200</label>
+                        <label for="q2" tabindex="0" class=<?=$c2?>>$200</label>
                     </li>
                     <li class="Initems">
-                        <label for="q1" tabindex="0" class="button">$100</label>
+                        <label for="q1" tabindex="0" class=<?=$c?>>$100</label>
                     </li>
                 </ul>
                 </section>
